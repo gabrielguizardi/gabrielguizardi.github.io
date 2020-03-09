@@ -88,3 +88,17 @@ svg {
   color: black;
   letter-spacing: 2px;
 }
+
+.contato {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contato img {
+  height: 7vh;
+}
+
+.social {
+  font-size: 50px; 
+}
