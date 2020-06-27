@@ -1,0 +1,17 @@
+#header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#header > .container > img {
+  height: 75px;
+}
+#header > .container > div {
+  font-family: Ubuntu, "Helvetica";
+}
+#header > .container > div > a {
+  color: var(--text-light);
+}
+#header > .container > div > a.active {
+  color: var(--primary-color);
+}
