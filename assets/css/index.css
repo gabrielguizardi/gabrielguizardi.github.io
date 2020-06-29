@@ -41,11 +41,11 @@
   text-align: center;
 }
 #about > div > p {
-  max-width: 500px;
+  max-width: 520px;
   font-family: "Open Sans", monospace;
   font-size: 1em;
   color: var(--text-white-purple);
-  text-align: center;
+  text-align: justify;
 }
 
 #more {
@@ -128,7 +128,61 @@
   width: 70px
 }
 
-@media only screen and (max-width: 720px) {
+#portifolio {
+  margin-bottom: 100px;
+}
+#portifolio > .container > h2 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.6em;
+}
+#portifolio > .container > main {
+  display: grid;
+  gap: 30px 40px;
+  justify-content: center;
+  margin-top: 50px;
+}
+#portifolio > .container > main > .project {
+  background: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#portifolio > .container > main > .project > .overflow {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: visibility 0.5s, background 0.5s linear;
+}
+#portifolio > .container > main > .project:hover > .overflow {
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.7);
+}
+#portifolio > .container > main > .project > .overflow > h3 {
+  font-family: "Ubuntu", monospace;
+  font-size: 1.4em;
+  color: var(--title-white-purple);
+}
+#portifolio > .container > main > .project > .overflow > span {
+  font-family: "Ubuntu", monospace;
+  font-weight: lighter;
+  color: var(--text-white-purple);
+}
+#portifolio > .container > main > .project > .overflow > a {
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  margin-top: 20px;
+  color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 750px) {
   #more > .container > #all-sides {
     flex-direction: column;
   }
@@ -141,8 +195,11 @@
   #more > .container > #all-sides > div.right  {
     border-radius: 0px 0px 8px 8px;
   }
+  #portifolio > .container > main {
+    grid: repeat(3, 170px) / minmax(auto, 400px);
+  }
 }
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 750px) {
   #more > .container > #all-sides {
     flex-direction: row;
   }
@@ -154,5 +211,8 @@
   }
   #more > .container > #all-sides > div.right  {
     border-radius: 0px 8px 8px 0px;
+  }
+  #portifolio > .container > main {
+    grid: 170px / repeat(3, 1fr);
   }
 }
